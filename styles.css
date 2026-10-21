@@ -1,0 +1,66 @@
+:root { --paper: #f4f5fb; --ink: #24243b; --muted: #55566e; --violet: #6c63ff; --deep: #4840c8; --line: #dfe1ed; font: 17px/1.7 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--ink); background: var(--paper); }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: var(--deep); text-underline-offset: .2em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--deep); outline-offset: 5px; border-radius: 3px; }
+.wrap { max-width: 1160px; padding-inline: 36px; margin-inline: auto; }
+.skip { position: absolute; top: -80px; left: 12px; z-index: 10; background: white; padding: 12px; }
+.skip:focus { top: 12px; }
+.header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 25px; }
+.brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); font-size: 21px; font-weight: 750; text-decoration: none; }
+.brand img { border-radius: 9px; }
+nav { display: flex; flex-wrap: wrap; gap: 25px; align-items: center; }
+nav a { color: var(--muted); font-size: 14px; text-decoration: none; }
+nav a[aria-current] { color: var(--deep); text-decoration: underline; }
+.hero { display: grid; grid-template-columns: 1.15fr 1fr; gap: 64px; align-items: center; padding-block: 75px 85px; }
+.context { color: var(--deep); font-size: 15px; font-weight: 600; margin: 0 0 20px; }
+h1, h2, h3 { line-height: 1.15; letter-spacing: -.035em; }
+h1 { font-size: clamp(38px, 4.3vw, 54px); font-weight: 750; margin: 0 0 25px; }
+.lead { max-width: 49ch; color: var(--muted); font-size: 18px; margin: 0 0 30px; }
+.button { display: inline-flex; justify-content: center; text-decoration: none; padding: 13px 21px; color: white; background: var(--deep); border-radius: 9px; font-weight: 650; font-size: 15px; }
+.button:hover { background: #3730a3; }
+.aside { font-size: 13px; color: var(--muted); margin-top: 14px; }
+.timer-scene { margin: 0; align-self: center; }
+.browser-bar { display: flex; justify-content: space-between; gap: 10px; border: 1px solid var(--line); border-bottom: 0; border-radius: 13px 13px 0 0; padding: 12px 16px; background: #e9eaf4; color: var(--muted); font-size: 12px; }
+.browser-bar span:first-child { letter-spacing: 3px; color: #a8abc1; }
+.example { padding: 24px 28px; background: white; border: 1px solid var(--line); border-radius: 0 0 13px 13px; }
+.example-top { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.example-name { font-size: 15px; font-weight: 650; }
+.tag { background: #f0efff; padding: 2px 9px; color: var(--deep); border-radius: 5px; font-size: 11px; }
+.dial { display: grid; place-items: center; margin: 28px auto 20px; width: 190px; height: 190px; border-radius: 50%; background: conic-gradient(var(--violet) 0deg 265deg, #ecebff 265deg 360deg); position: relative; }
+.dial::before { content: ''; position: absolute; inset: 9px; background: white; border-radius: 50%; }
+.dial span { z-index: 1; font-size: 43px; font-weight: 650; line-height: 1.1; font-variant-numeric: tabular-nums; text-align: center; letter-spacing: -.05em; }
+.dial small { display: block; font-size: 11px; color: var(--muted); font-weight: 400; margin-top: 8px; letter-spacing: 0; }
+.example p { text-align: center; font-size: 13px; color: var(--muted); margin: 0 auto 22px; max-width: 28ch; }
+.example-controls { display: flex; justify-content: center; gap: 12px; font-size: 12px; }
+.example-controls span { border: 1px solid var(--line); padding: 5px 16px; border-radius: 5px; color: var(--muted); }
+figcaption { margin: 12px 3px 0; font-size: 11px; color: var(--muted); }
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding-block: 42px 56px; border-top: 1px solid var(--line); }
+.features h2 { font-size: 21px; margin: 0 0 14px; }
+.features p { font-size: 15px; color: var(--muted); margin: 0; }
+.privacy-section { display: grid; grid-template-columns: 1fr 1.25fr; gap: 60px; padding: 48px; margin: 0 -12px; border-radius: 16px; background: #e9e7ff; }
+.privacy-section h2 { font-size: 34px; margin: 0; }
+.privacy-section h3 { font-size: 18px; margin-top: 26px; }
+.privacy-section p { font-size: 15px; margin-top: 0; }
+.text-link { font-weight: 650; font-size: 15px; }
+.help { padding-block: 60px; }
+.help h2 { font-size: 25px; }
+.help p { font-size: 15px; color: var(--muted); overflow-wrap: anywhere; }
+.footer { display: flex; align-items: flex-start; justify-content: space-between; gap: 30px; padding-block: 28px 38px; border-top: 1px solid var(--line); }
+.footer p { font-size: 12px; color: var(--muted); margin: 8px 0 0; }
+.footer nav { max-width: 440px; gap: 12px 25px; justify-content: flex-end; }
+.footer nav a { font-size: 12px; }
+.legal { max-width: 860px; padding-block: 35px 65px; }
+.legal h1 { font-size: 40px; margin-top: 30px; }
+.legal h2 { font-size: 25px; margin-top: 42px; scroll-margin-top: 20px; }
+.legal p, .legal li { font-size: 16px; }
+.legal li { margin-block: 12px; }
+.legal p, .legal li, .legal a, code { overflow-wrap: anywhere; }
+.legal ul { padding-left: 25px; }
+.back { font-size: 14px; }
+code { font-size: .9em; background: #e9eaf4; border-radius: 4px; padding: 2px 5px; }
+.policy-note { margin-top: 45px; border-top: 1px solid var(--line); padding-top: 8px; }
+@media (max-width: 850px) { .hero { gap: 30px; } .wrap { padding-inline: 26px; } h1 { font-size: 40px; } .privacy-section { padding: 32px; gap: 30px; } .privacy-section h2 { font-size: 29px; } .features { gap: 25px; } }
+@media (max-width: 640px) { .wrap { padding-inline: 22px; } .header { padding-block: 20px; gap: 20px; flex-wrap: wrap; } nav { gap: 20px; } .hero { grid-template-columns: 1fr; padding-block: 35px 45px; gap: 28px; } h1 { font-size: 40px; } .lead { font-size: 17px; } .timer-scene { max-width: 420px; width: 100%; } .features { grid-template-columns: 1fr; gap: 28px; padding-block: 32px; } .privacy-section { grid-template-columns: 1fr; margin: 0; padding: 25px; gap: 26px; } .help { padding-block: 35px; } .footer { flex-direction: column; } .footer nav { justify-content: flex-start; } .legal h1 { font-size: 33px; } .legal h2 { font-size: 23px; } .legal p, .legal li { font-size: 15px; } .button { max-width: 100%; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }

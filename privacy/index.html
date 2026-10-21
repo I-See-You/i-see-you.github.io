@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="What Tab Timer stores, why optional Google Drive access is requested, and how to manage and delete your data.">
+<meta name="theme-color" content="#6c63ff">
+<meta name="color-scheme" content="light">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Privacy policy — Tab Timer</title>
+<link rel="canonical" href="https://i-see-you.github.io/privacy/">
+<link rel="icon" href="/icon.png" type="image/png">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header wrap">
+<a class="brand" href="/"><img src="/icon.png" width="36" height="36" alt="">Tab Timer</a>
+<nav aria-label="Main navigation"><a href="/privacy/" aria-current="page">Privacy</a><a href="/terms/">Terms</a><a href="mailto:zubayet.zico@practicenumbers.com">Support</a></nav>
+</header>
+<main id="main" class="legal wrap"><p class="back"><a href="/">Back to Tab Timer</a></p><h1>Privacy Policy for Tab Timer</h1>
+<p><strong>Last Updated:</strong> October 20, 2026</p>
+<p>Tab Timer (&quot;the Extension&quot;) is a Chrome extension that counts the time you spend on websites, shows it on the toolbar icon and, where you allow it, in a floating widget and the tab title, and keeps a local history on the Analytics page. You choose whether it counts every website (except sites you leave out) or only the sites you pick; you can change this at any time.</p>
+<h2 id="1-what-the-extension-stores">1. What the Extension stores</h2>
+<p>Data is stored with Chrome&#x27;s own storage and, only if you choose it, a sync file, folder or your Google Drive. Tab Timer has no servers and no telemetry.</p>
+<p>Settings, kept in <code>chrome.storage.sync</code> (Chrome syncs them across your signed-in browsers):</p>
+<ul>
+<li>Where time counts (every website, or the sites you pick), the sites you leave out, site categories, limits and countdown rules</li>
+<li>Widget, display and timer preferences</li>
+<li>The sites you chose for &quot;Remember pages and videos&quot;</li>
+</ul>
+<p>History is recorded on this device in <code>chrome.storage.local</code> while &quot;Save history&quot; is on (it is on for new installs; turn it off on the welcome page or in Settings › History &amp; sync):</p>
+<ul>
+<li>Time per website per day (focused, and listening when a tab plays sound in the background)</li>
+<li>Time per website per hour of the day, and when each session on a site started and ended</li>
+<li>Countdown and daily-limit results per site (for example &quot;limit reached&quot;, &quot;+5 min&quot; taken)</li>
+<li>History of your other browsers (other Chrome profiles or computers), only if you restore a backup or connect a sync destination: time per website per day and per hour, and sessions. Page titles and addresses of other browsers are never kept</li>
+<li>Only if you turn on &quot;Remember pages and videos&quot; for a site: the titles and addresses (path only, never the part after &quot;?&quot;) of pages on that site, with the time spent on each. A title is what the page calls itself, so it can include what the page shows, such as a search or an email subject</li>
+</ul>
+<p>Working data, kept only on this device in <code>chrome.storage.local</code>, whether or not history is on:</p>
+<ul>
+<li>Countdowns that are running, and today&#x27;s time on each site toward your daily limits</li>
+<li>If you close a tab while its countdown runs: the page address and how much time was left, so the countdown can resume when you open that page again (up to 50 pages, kept 7 days)</li>
+<li>The last 20 tabs a countdown closed, with their title and address, so you can reopen them from the notification or from Settings</li>
+<li>A name for this browser (like &quot;Mac · Chrome&quot;, which you can change) and a random ID, so backups and Analytics can tell your browsers apart, and the date of your last backup</li>
+<li>A random recognition code for this Chrome profile, kept in Chrome&#x27;s local extension storage and included with its history in sync and backup files. It helps select an existing profile when linking again. It contains no email address or Google account information, and local file / folder linking requests no account access. Uninstalling or clearing extension storage removes the local code; you can still select a saved profile manually.</li>
+<li>Small app state: how you left the popup&#x27;s tab list, whether you&#x27;ve seen a tip or rating prompt, and a copy of the running timers kept for a few minutes while the extension updates</li>
+</ul>
+<p>Linking your Chrome profiles, only if you set it up in Settings › History &amp; sync (a sync file such as &quot;tab-timer-sync.json&quot;, or a folder, that you choose):</p>
+<ul>
+<li>Tab Timer writes this profile&#x27;s history to that file or folder: time per website per day and per hour, sessions, countdown and daily-limit results, the browser&#x27;s name, and its settings (sites, limits, display). Page titles and addresses are never written there.</li>
+<li>It reads what your other profiles wrote there. With &quot;Count my other profiles toward daily limits&quot; on, their time today counts toward your daily limits here.</li>
+<li>The file or folder is on your computer. If you choose one that a cloud service keeps (iCloud Drive, Dropbox, OneDrive, Google Drive for desktop), that service copies the files under its own terms. File / folder sync itself makes no network requests.</li>
+<li>To stop, choose &quot;Disconnect file sync&quot; or &quot;Disconnect folder sync&quot; in that destination’s controls. You can also remove this profile&#x27;s history from the file or folder, or unlink another profile.</li>
+<li>Earlier experimental email / email-derived profile metadata is removed from local profile records when initialized and from this profile&#x27;s next successful sync. Existing exported backups retain their original contents.</li>
+</ul>
+<p>File / folder and Google Drive sync can be connected at the same time:</p>
+<ul>
+<li>Each destination receives this profile’s own history and settings only. Downloaded history from another profile is not uploaded to another destination. Connect each profile separately to the destinations you want it to use.</li>
+<li>The same profile seen through both destinations is stored once locally and counted once in reports and shared daily limits.</li>
+<li>Disconnecting one destination leaves the other connected. Downloaded history stays here by default; optional cleanup removes only profiles not still shared through another connected destination. Retained snapshots remain visible in reports but no longer contribute to shared daily limits.</li>
+</ul>
+<p>Google Drive, only if you choose Connect in Settings:</p>
+<ul>
+<li>The same history and settings as file / folder sync are stored in Tab Timer&#x27;s hidden app-data folder in the Google account you choose. Other Drive files are outside the requested access. Page titles, page addresses, private browsing, active timers and closed-tab lists are excluded.</li>
+<li>Google asks for access to Tab Timer&#x27;s own app-data folder and account identification. The chosen Drive account&#x27;s verified email and stable Google account ID are kept locally to show the destination and prevent accidental account switches. They are not written into profile history / library files. Local profile recognition still uses a random code, even when using Drive.</li>
+<li>One Chrome profile has one Tab Timer history, even when several Google accounts are signed in on websites. History is grouped by website; Tab Timer does not identify the Google account used by each tab or split history by website account. All of this profile&#x27;s synced history uses the storage account you explicitly chose. Changing website accounts does not change that destination.</li>
+<li>Short-lived access tokens are kept only in Chrome&#x27;s session storage, not local / synced storage, backup files or logs. Google authentication and signing keys are checked before use; there is no Tab Timer login server or client secret.</li>
+<li>The Chrome identity permission and Google API endpoint access are optional and requested only for Drive. The extension never requests Chrome&#x27;s <code>identity.email</code> permission.</li>
+<li>Disconnecting Google Drive clears this installation&#x27;s stored account / token and relinquishes its optional Chrome Drive access. It does not sign Google websites out or revoke Google authorization for your other installations. To withdraw Tab Timer&#x27;s Google authorization across installations, use <a href="https://myaccount.google.com/connections">Google Account connections</a>; those installations may need to reconnect. You may also remove Tab Timer&#x27;s app data from Google Drive&#x27;s Manage apps settings. Copies kept in Drive remain there unless you choose to remove them. A random local authorization-generation value prevents a pending sign-in from restoring a disconnected session; it contains no account data and is not exported.</li>
+</ul>
+<p>To decide whether time counts, the Extension also checks on your device whether you&#x27;re away from the computer, whether a tab is playing sound, and whether a browser window can be seen: minimized, on another desktop, or moved off screen, using the position and size of your screens. These checks are used at that moment and are not stored.</p>
+<p>The Extension does not read page content, form data, passwords or cookies. Tabs in private (Incognito) windows are never saved to history: their countdowns are kept only in memory until Chrome closes, they are left out of the lists of paused and closed tabs, and widget changes made there aren&#x27;t synced.</p>
+<h2 id="2-how-the-data-is-used">2. How the data is used</h2>
+<p>Only to show you your own time on the Analytics page, in the popup and in the widget, and to run the limits and countdowns you set. Files you export (CSV, JSON or a backup file) are saved by you and go only where you put them. A backup file holds your history, settings and limits, and the history of other browsers restored here; remembered page titles are included only for this browser. Optional Google Drive sync connects only to Google endpoints allowed by the manifest; local file / folder sync needs no network connection from Tab Timer. Tab Timer&#x27;s use of data adheres to the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome Web Store User Data Policy</a>, including the Limited Use requirements. Data is never sold, never used for advertising, never sent to an advertising or analytics service. Optional Drive data is stored by Google under its own terms.</p>
+<h2 id="3-host-permissions">3. Host permissions</h2>
+<p>Counting time needs no site access: the Extension knows which site a tab shows from Chrome&#x27;s <code>tabs</code> permission. Site access is optional, asked only when you choose to see the clock on a site (or on every website), and used only to show the floating widget, put the time in the tab title, and tell when a page is hidden.</p>
+<h2 id="4-retention-and-deletion">4. Retention and deletion</h2>
+<ul>
+<li>Pages and videos are kept for 90 days. Everything else in the history is kept until you delete it.</li>
+<li>Paused countdowns of closed tabs are dropped after 7 days. The list of tabs closed by a countdown keeps the last 20; clear it in Settings › Limits.</li>
+<li>Delete one site&#x27;s history from its page in Analytics, all recorded pages in Settings › History &amp; sync › Advanced settings, or the whole history with &quot;Clear all analytics data&quot;.</li>
+<li>Turning off &quot;Save history&quot; stops new history from being saved.</li>
+<li>Remove another browser&#x27;s history from Settings › History &amp; sync.</li>
+<li>Uninstalling the Extension removes everything it stored. Backup files you saved stay where you put them.</li>
+</ul>
+<h2 id="5-children-s-privacy">5. Children&#x27;s privacy</h2>
+<p>Tab Timer does not knowingly collect information from children under 13.</p>
+<h2 id="6-changes">6. Changes</h2>
+<p>Updates to this policy are reflected in the &quot;Last Updated&quot; date above.</p>
+<h2 id="7-contact">7. Contact</h2>
+<p><strong>Email:</strong> zubayet.zico@practicenumbers.com</p><aside class="policy-note"><h2>About this website</h2><p>The policy above describes the extension. These public information pages do not include our own analytics, advertising, forms or sign-in. The hosting provider may process normal website request information to serve and secure the pages.</p><p>The original policy location on <a href="https://gist.github.com/I-See-You/7605d71bdcecd34c2b8ec895d90399d1">GitHub Gist</a> remains available. This page contains the current extension policy in full so you can read it without leaving this site.</p></aside></main>
+<footer class="footer wrap"><div><a class="brand" href="/">Tab Timer</a><p>Website time, countdowns and daily limits for Chrome.</p></div><nav aria-label="Footer navigation"><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of use</a><a href="https://gist.github.com/I-See-You/7605d71bdcecd34c2b8ec895d90399d1">Policy on GitHub Gist</a><a href="mailto:zubayet.zico@practicenumbers.com">Contact support</a></nav></footer>
+</body>
+</html>
